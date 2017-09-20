@@ -1,0 +1,17 @@
+{
+	"devices" : [
+		{"deviceName" : "1115FBD16FEF0303"},
+		{
+		"platformName" : "Android",
+		"platformVersion": "^[5678].*",
+		"manufacturer" : "Samsung"
+		}
+		],
+"tags" : ["plugin", "espresso", "demo"],
+"projectName": "playground",
+"projectVersion": "1.5",
+"jobName": "newFeature",
+"jobNumber": "45",
+
+"apkName": "app-debug"
+}

@@ -1,0 +1,38 @@
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion 26
+    buildToolsVersion "26.0.1"
+    defaultConfig {
+        applicationId "com.philipps.androidtestapp"
+        minSdkVersion 20
+        targetSdkVersion 26
+        versionCode 1
+        versionName "1.0"
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+    productFlavors {
+    }
+}
+
+dependencies {
+    compile fileTree(include: ['*.jar'], dir: 'libs')
+    androidTestCompile('com.android.support.test.espresso:espresso-core:2.2.2', {
+        exclude group: 'com.android.support', module: 'support-annotations'
+    })
+    compile 'com.android.support:appcompat-v7:26.+'
+    compile 'com.android.support.constraint:constraint-layout:1.0.2'
+    testCompile 'junit:junit:4.12'
+}
+apply plugin: 'com.perfectomobile.instrumentedtest.gradleplugin'
+
+perfectoGradleSettings {
+    cloudURL "ps.perfectomobile.com"
+    securityToken "eyJhbGciOiJSUzI1NiJ9.eyJqdGkiOiIxNDk1YTI3OS0xODZhLTQ5ZDctOWYyMS01NTg0N2I4MzdkYTgiLCJleHAiOjAsIm5iZiI6MCwiaWF0IjoxNTA1MzgzMTU3LCJpc3MiOiJodHRwczovL2F1dGgucGVyZmVjdG9tb2JpbGUuY29tL2F1dGgvcmVhbG1zL3BzLXBlcmZlY3RvbW9iaWxlLWNvbSIsImF1ZCI6Im9mZmxpbmUtdG9rZW4tZ2VuZXJhdG9yIiwic3ViIjoiZWU3OGI2YzctMDhiNy00MmM3LWI2MGEtNTRhYWZiNzUyNDVkIiwidHlwIjoiT2ZmbGluZSIsImF6cCI6Im9mZmxpbmUtdG9rZW4tZ2VuZXJhdG9yIiwic2Vzc2lvbl9zdGF0ZSI6ImRiMmY3MWUwLTVjY2YtNDU0Yy1iYWI3LTUyZGRiZjliODJkYSIsImNsaWVudF9zZXNzaW9uIjoiYTY2MTgyZGUtMWY2OC00MDUwLTk2ZWQtMjI5NjQ1OGJkYzA2IiwicmVhbG1fYWNjZXNzIjp7InJvbGVzIjpbIm9mZmxpbmVfYWNjZXNzIl19LCJyZXNvdXJjZV9hY2Nlc3MiOnsiYWNjb3VudCI6eyJyb2xlcyI6WyJtYW5hZ2UtYWNjb3VudCIsInZpZXctcHJvZmlsZSJdfX19.jhOaQLgXfhskqCvO7FcXaf1Jo1tt8k2m18YNCB61MzTv59sim8o6TUV29ueW9lqeRFpW9v8eu-KkbJBlzq-ChpC3QOVkvFBarAu7JpLiLWRmfA3c5okPXcTkrTlfQZWdBR2DYYmjyS-DNelpGSQ6NPNWdEA6MtaN_CoVAMmkvfg-Gu3eW2ciUwFQPH-d3yMUm2oKNtpNQU5gxg_8wuna2-1jNkiRgqXratqc6TDFCl3cTS6lmRDHyNaVwjGmxLc41VgsjppoEK6IdAOp_iYwUHFnPW_RBZEGfIoPsV6yYYbzttV_NuJHz7lq7ViaH8uoayTV6ms4UR5TVDn8nV4x7w"
+}
