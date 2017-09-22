@@ -2,6 +2,7 @@
 	"devices" : [
 		{"deviceName" : "1115FBD16FEF0303"},
 		{
+		"deviceName" : "04157DF43A656B1A",
 		"platformName" : "Android",
 		"platformVersion": "^[5678].*",
 		"manufacturer" : "Samsung"
